@@ -41,53 +41,53 @@ public class ChangePixel : MonoBehaviour
     }
 }
 
-//TODO : Faire en sorte que le Base Map sois généré au début de la scène en mode Read/Write et même chose pour le Metallic Map au besoin.
-[System.Serializable]
-public class PaintableTexture
-{
-    public string id;
-    public RenderTexture runTimeTexture;
-    public RenderTexture paintedTexture;
+////TODO : Faire en sorte que le Base Map sois généré au début de la scène en mode Read/Write et même chose pour le Metallic Map au besoin.
+//[System.Serializable]
+//public class PaintableTexture
+//{
+//    public string id;
+//    public RenderTexture runTimeTexture;
+//    public RenderTexture paintedTexture;
 
-    private Material mPaintInUV;
-    private Material mFixedEdges;
-    private RenderTexture fixedIlsands;
+//    private Material mPaintInUV;
+//    private Material mFixedEdges;
+//    private RenderTexture fixedIlsands;
 
-    public PaintableTexture(Color clearColor, int width, int height, string id,
-        Shader sPaintInUV, Mesh mToDraw, Shader fixIlsandEdgesShader, RenderTexture markedIlsandes)
-    {
-        this.id = id;
+//    public PaintableTexture(Color clearColor, int width, int height, string id,
+//        Shader sPaintInUV, Mesh mToDraw, Shader fixIlsandEdgesShader, RenderTexture markedIlsandes)
+//    {
+//        this.id = id;
 
-        runTimeTexture = new RenderTexture(width, height, 0)
-        {
-            anisoLevel = 0,
-            useMipMap = false,
-            filterMode = FilterMode.Bilinear
-        };
+//        runTimeTexture = new RenderTexture(width, height, 0)
+//        {
+//            anisoLevel = 0,
+//            useMipMap = false,
+//            filterMode = FilterMode.Bilinear
+//        };
 
-        paintedTexture = new RenderTexture(width, height, 0)
-        {
-            anisoLevel = 0,
-            useMipMap = false,
-            filterMode = FilterMode.Bilinear
-        };
-
-
-        fixedIlsands = new RenderTexture(paintedTexture.descriptor);
-
-        Graphics.SetRenderTarget(runTimeTexture);
-        GL.Clear(false, true, clearColor);
-        Graphics.SetRenderTarget(paintedTexture);
-        GL.Clear(false, true, clearColor);
+//        paintedTexture = new RenderTexture(width, height, 0)
+//        {
+//            anisoLevel = 0,
+//            useMipMap = false,
+//            filterMode = FilterMode.Bilinear
+//        };
 
 
-        mPaintInUV = new Material(sPaintInUV);
-        if (!mPaintInUV.SetPass(0)) Debug.LogError("Invalid Shader Pass: ");
-        mPaintInUV.SetTexture("_MainTex", paintedTexture);
+//        fixedIlsands = new RenderTexture(paintedTexture.descriptor);
 
-        mFixedEdges = new Material(fixIlsandEdgesShader);
-        mFixedEdges.SetTexture("_IlsandMap", markedIlsandes);
-        mFixedEdges.SetTexture("_MainTex", paintedTexture);
+//        Graphics.SetRenderTarget(runTimeTexture);
+//        GL.Clear(false, true, clearColor);
+//        Graphics.SetRenderTarget(paintedTexture);
+//        GL.Clear(false, true, clearColor);
 
-    }
-}
+
+//        mPaintInUV = new Material(sPaintInUV);
+//        if (!mPaintInUV.SetPass(0)) Debug.LogError("Invalid Shader Pass: ");
+//        mPaintInUV.SetTexture("_MainTex", paintedTexture);
+
+//        mFixedEdges = new Material(fixIlsandEdgesShader);
+//        mFixedEdges.SetTexture("_IlsandMap", markedIlsandes);
+//        mFixedEdges.SetTexture("_MainTex", paintedTexture);
+
+//    }
+// }

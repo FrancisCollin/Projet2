@@ -65,9 +65,18 @@
   <ItemGroup>
     <Compile Include="Assets\Couleur Pixel\Scripts\ChangePixel.cs" />
     <Compile Include="Assets\Drawing\Scripts\Paintable.cs" />
-    <Compile Include="Assets\Mesh Texture Painting\TexturePaint.cs" />
+    <Compile Include="Assets\Mesh Texture Painting\Scripts\InputUIManager.cs" />
+    <Compile Include="Assets\Mesh Texture Painting\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Mesh Texture Painting\Scripts\TexturePaint.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\ColorPicker.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\TexturePaint.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\BrushShader.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\FixIlsandEdges.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\PeindreTexture.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\MarkIlsands.shader" />
+    <None Include="Assets\Mesh Texture Painting\Scripts\CombineMetalicSmoothness.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
