@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.4.18f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +52,9 @@
     <UnityVersion>2019.4.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.18f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -62,20 +63,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Couleur Pixel\Scripts\ChangePixel.cs" />
-    <Compile Include="Assets\Drawing\Scripts\Paintable.cs" />
-    <Compile Include="Assets\Mesh Texture Painting\Scripts\InputUIManager.cs" />
-    <Compile Include="Assets\Mesh Texture Painting\Scripts\MoveCamera.cs" />
-    <Compile Include="Assets\Mesh Texture Painting\Scripts\TexturePaint.cs" />
+    <Compile Include="Assets\1.Drawing\Scripts\Paintable.cs" />
+    <Compile Include="Assets\3.Couleur Pixel\Scripts\ChangePixel.cs" />
+    <Compile Include="Assets\4.Mesh Texture Painting\Scripts\InputUIManager.cs" />
+    <Compile Include="Assets\4.Mesh Texture Painting\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\4.Mesh Texture Painting\Scripts\TexturePaint.cs" />
+    <Compile Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\ColorSelector\ColorSelector.cs" />
+    <Compile Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\Scripts\GUIManager.cs" />
+    <Compile Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\Scripts\ModelViewControls.cs" />
+    <Compile Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\Scripts\TexturePainter.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\ColorPicker.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\TexturePaint.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\BrushShader.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\FixIlsandEdges.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\PeindreTexture.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\MarkIlsands.shader" />
-    <None Include="Assets\Mesh Texture Painting\Scripts\CombineMetalicSmoothness.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\ColorPicker.shader" />
+    <None Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\ColorSelector\Shaders\ColorSelector.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\TexturePaint.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\BrushShader.shader" />
+    <None Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\Scripts\CustomStandard.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\FixIlsandEdges.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\PeindreTexture.shader" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\MarkIlsands.shader" />
+    <None Include="Assets\5.DrawingOnMesh\Resources\TexturePainter ( Place Me Out of Resources)\ReadMe.txt" />
+    <None Include="Assets\4.Mesh Texture Painting\Scripts\CombineMetalicSmoothness.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

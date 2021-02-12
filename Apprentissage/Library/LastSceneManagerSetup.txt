@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Mesh Texture Painting/Mesh Texture Painting.unity
+- path: Assets/5.DrawingOnMesh/Resources/TexturePainter ( Place Me Out of Resources)/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
